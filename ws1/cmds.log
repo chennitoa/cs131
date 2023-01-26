@@ -1,0 +1,21 @@
+    1  ping
+    2  ls
+    3  dhslahd
+    4  echo dsahdas
+    5  ecoh $HOME
+    6  echo $PATH
+    7  pwd
+    8  git --version
+    9  quit
+   10  exit
+   11  systemctl enable --now cockpit.socket
+   12  passwd
+   13  wget www.github.com
+   14  ls
+   15  git add remote origin https://github.com/chennitoa/cs131
+   16  mkdir cs131
+   17  pwd
+   18  cd cs131
+   19  mkdir ws1
+   20  cd ws1
+   21  history > cmds.log
