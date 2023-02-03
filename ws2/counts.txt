@@ -1,0 +1,6 @@
+   Unverified Reviews: 
+	Line Count: 2876174 
+	Word Count: 505766888
+   Verified Reviews:
+	Line Count: 229346
+	Word Count: 44402864

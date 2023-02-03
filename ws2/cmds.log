@@ -1,0 +1,275 @@
+    1  ping
+    2  ls
+    3  dhslahd
+    4  echo dsahdas
+    5  ecoh $HOME
+    6  echo $PATH
+    7  pwd
+    8  git --version
+    9  quit
+   10  exit
+   11  systemctl enable --now cockpit.socket
+   12  passwd
+   13  wget www.github.com
+   14  ls
+   15  git add remote origin https://github.com/chennitoa/cs131
+   16  mkdir cs131
+   17  pwd
+   18  cd cs131
+   19  mkdir ws1
+   20  cd ws1
+   21  history > cmds.log
+   22  ls
+   23  cat cmds.log
+   24  cd ..
+   25  git init
+   26  ls
+   27  git status
+   28  git add ws1/
+   29  git status
+   30  git commit -m Added cmds.log
+   31  git commit -m "Added cmds.log"
+   32  git config --global user.email achennito@gmail.com
+   33  git config --global user.email "achennito@gmail.com"
+   34  git config --global user.name "Austin Chen"
+   35  git commit -m "Added cmds.log"
+   36  git branch
+   37  git checkout -b my-new-branch
+   38  git remote add origin https://github.com/chennitoa/cs131
+   39  git push -u origin master
+   40  exit
+   41  ssh-keygen -t ed25519 -C "achennito@gmail.com"
+   42  ls
+   43  cd .ssh
+   44  ls
+   45  cat id_ed25519.pub
+   46  cd ..
+   47  cd cs131
+   48  git push
+   49  git push --set-upstream origin ws1-branch
+   50  git remote add origin github.com/chennitoa/cs131
+   51  git pull origin
+   52  git pull origin cs131-branch
+   53  git branch
+   54  git pull origin my-new-branch
+   55  git pull origin master
+   56  git push
+   57  git push --set-upstream origin my-new-branch
+   58  git ssh
+   59  cd ..
+   60  ls
+   61  ls -a
+   62  mv .ssh cs131
+   63  ls
+   64  cd cs131
+   65  ls -a
+   66  git pull origin my-new-branch
+   67  git push
+   68  git push --set-upstream origin my-new-branch
+   69  ssh -t git@github.com
+   70  git bash
+   71  ssh -T git@github.com
+   72  eval "$(ssh-agent -s)"
+   73  ssh-add -l -E sha256
+   74  ssh -vT git@github.com
+   75  ssh-add
+   76  rm .ssh
+   77  cd .ssh
+   78  ls
+   79  rm -a
+   80  rm --help
+   81  cd ..
+   82  rm -f cs131
+   83  ls
+   84  ls -a
+   85  rm -f .ssh
+   86  cd ws1
+   87  cd ..
+   88  cd .ss
+   89  cd .ssh
+   90  ls
+   91  rm id_ed25519
+   92  rm id_ed25519.pub
+   93  cd ..
+   94  ls
+   95  ls -a
+   96  rmdir .ssh
+   97  ls -a
+   98  ssh-keygen -t ed25519 -C "achennito@gmail.com"
+   99  eval "$ssh-agent -s)"
+  100  eval "$(ssh-agent -s)"
+  101  ssd-add ~/.ssh/id_ed25519
+  102  ssh-add ~/.ssh/id_ed25519
+  103  cd .ssh
+  104  ls
+  105  ls -a
+  106  cd ..
+  107  ls -a
+  108  cd .ssh
+  109  ls
+  110  cat id_ed25519.pub
+  111  cd ../cs131
+  112  ls
+  113  git push
+  114  git push -u origin my-new-branch
+  115  ssh -T git@github.com
+  116  git push -u origin my-new-branch
+  117  git remote set-url origin git@github.com:chennitoa/cs131
+  118  git -u origin my-new-brnach
+  119  git -u origin my-new-branch
+  120  git push origin
+  121  git push -u origin my-new-branch
+  122  git pull origin master
+  123  ls
+  124  git pull origin my-new-branch
+  125  git checkout master
+  126  git branch main master -f
+  127  git checkout main
+  128  git push origin main -f
+  129  git branch
+  130  git branch -delete my-new-brnach
+  131  git branch --delete my-new-branch
+  132  ls
+  133  exit
+  134  wget  https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  135  ls
+  136  cd cs131
+  137  mkdir ws2
+  138  cd ..
+  139  mv amazon_reviews_us_Books_v1_02.tsv.gz cs131/ws2
+  140  cd cs131
+  141  cd ws2
+  142  ls
+  143  gunzip amazon_reviews_us_Books_v1_02.tsv.gz 
+  144  head 100 amazon_reviews_us_Books_v1_02.tsv 
+  145  head --help
+  146  grep verified
+  147  man grep
+  148  grep "Books.*?N\n" amazon_reviews_us_Books_v1_02.tsv 
+  149  ls
+  150  grep "Books" amazon_reviews_us_Books_v1_02.tsv 
+  151  head -LINE=100 amazon_reviews_us_Books_v1_02.tsv 
+  152  head --help
+  153  head --lines=100 amazon_reviews_us_Books_v1_02.tsv 
+  154  wc
+  155  wc --help
+  156  wc 1 > a.txt
+  157  touch a.txt
+  158  wc amazon_reviews_us_Books_v1_02.tsv > a.txt
+  159  cat a.txt
+  160  grep -
+  161  grep -E 'Y.*?2005-10-14'
+  162  grep -E 'Y.*?2005-10-14' amazon_reviews_us_Books_v1_02.tsv 
+  163  tail --lines=100 amazon_reviews_us_Books_v1_02.tsv 
+  164  grep 'US.*?Y$' amazon_reviews_us_Books_v1_02.tsv 
+  165  grep 'US.*?Y' amazon_reviews_us_Books_v1_02.tsv 
+  166         
+  167  grep "Y$" amazon_reviews_us_Books_v1_02.tsv 
+  168  grep "Y     " amazon_reviews_us_Books_v1_02.tsv 
+  169  grep "US.*?Y    " amazon_reviews_us_Books_v1_02.tsv 
+  170  grep "US.*?Y   " amazon_reviews_us_Books_v1_02.tsv 
+  171  grep "US.*?Y[[:space:]]" amazon_reviews_us_Books_v1_02.tsv 
+  172  grep "US.*?Y[[:blank:]]" amazon_reviews_us_Books_v1_02.tsv 
+  173  grep -E 'US.*?Y."
+  174  grep -E 'US.*?Y.' amazon_reviews_us_Books_v1_02.tsv 
+  175  grep -E 'US.*?       Y       ' amazon_reviews_us_Books_v1_02.tsv 
+  176  grep -E 'US.*?Y       ' amazon_reviews_us_Books_v1_02.tsv 
+  177  grep -E 'US.*?       Y       ' amazon_reviews_us_Books_v1_02.tsv 
+  178  grep -E 'US.*?\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  179  grep -E 'US.*?\b[N|Y]\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  180  grep -E 'US.*?\bN|Y\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  181  grep -E 'US.*?\bN\bY\b|\bY\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  182  grep -E 'US.*?\b(N|Y)\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  183  grep -E 'US.*?\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  184  grep -E 'US.*?\bY       ' amazon_reviews_us_Books_v1_02.tsv 
+  185  grep -E 'US.*?\bY\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  186  grep -E 'US.*?\bN\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  187  grep -E '^US' amazon_reviews_us_Books_v1_02.tsv 
+  188  grep -E -v '^US' amazon_reviews_us_Books_v1_02.tsv 
+  189  grep -E '^US.*' amazon_reviews_us_Books_v1_02.tsv 
+  190  grep -E '^US.*?\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  191  grep -E '^US.*?Books\b[0-9].*?\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  192  grep -E '^US.*?Books\b[0-9].*?Y\b' amazon_reviews_us_Books_v1_02.tsv 
+  193  grep -E '^US.*?[0-9].*?Y\b' amazon_reviews_us_Books_v1_02.tsv 
+  194  grep -E '^US.*?[0-9].*?\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  195  grep -E '^US.*?Books.*?[0-9].*?\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  196  grep -E -v 'Books' amazon_reviews_us_Books_v1_02.tsv 
+  197  grep -E '^US.*?[N|Y].*?Y\b' amazon_reviews_us_Books_v1_02.tsv 
+  198  grep -E '^US.*?[N|Y]\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  199  egrep '^US.*?[N|Y]\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  200  egrep '^US.*?\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  201  egrep '^US.*?\b.\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  202  egrep '^US.*?\bN\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  203  egrep '^US.*?\bN.*?\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  204  egrep '^US.*?\bN[[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  205  egrep '^US.*?\bY[[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  206  egrep '^US.*?\b[N-Y][[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  207  egrep '^US.*?\b[Y][[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  208  egrep '^US.*?\b[N|Y][[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  209  egrep '^US.*?\b[Y][[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  210  egrep '^US.*?\bLaments.*?[N|Y][[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  211  egrep '^US.*?\b[N|Y][[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  212  rm a.txt
+  213  wc --help
+  214  wc -l -w egrep '^US.*?\b[N|Y][[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv 
+  215  touch verifiedReviews.txt
+  216  egrep '^US.*?\b[N|Y][[:blank:]]*\bY\b' amazon_reviews_us_Books_v1_02.tsv > verifiedReviews.txt
+  217  head --lines=100 verifiedReviews.txt 
+  218  egrep '^US.*?\b[N|Y][[:blank:]]*\bN\b' verifiedReviews.txt 
+  219  head amazon_reviews_us_Books_v1_02.tsv 
+  220  rm verifiedReviews.txt
+  221  touch vReviews.txt
+  222  egrep '^US.*?\b[N|Y][[:blank:]]*N\b'
+  223  egrep '^US.*?\b[N|Y][[:blank:]]*N\b' amazon_reviews_us_Books_v1_02.tsv 
+  224  egrep '^US.*?\b[0-9][[:blank]]*[0-9]*[[:blank]]*[0-9]*[[blank]]*[N|Y][[:blank:]]*N\b' amazon_reviews_us_Books_v1_02.tsv 
+  225  egrep '^US.*?\b[0-9][[:blank:]]*[0-9]*[[:blank:]]*[0-9]*[[:blank:]]*[N|Y][[:blank:]]*N\b' amazon_reviews_us_Books_v1_02.tsv 
+  226  egrep '^US.*?\b[0-9][[:blank:]]*[0-9]*[[:blank:]]*[0-9]*[[:blank:]]*[N|Y][[:blank:]]*N\b' amazon_reviews_us_Books_v1_02.tsv > vReviews.txt 
+  227  egrep '^US.*?\b[[:blank:]]*[N|Y][[:blank:]]*N\b' amazon_reviews_us_Books_v1_02.tsv > vReviews.txt 
+  228  tail vReviews.txt
+  229  egrep '^US.*?\b[[:blank:]]*[N|Y][[:blank:]]*N\b' amazon_reviews_us_Books_v1_02.tsv
+  230  egrep '^US.*?\b[[:blank:]]*[N|Y][[:blank:]]*Y\b' vReviews.txt 
+  231  egrep '^US.*?\b[[:blank:]]*[N|Y][[:blank:]]*?Y\b' vReviews.txt 
+  232  egrep '^US.*?\b[[:blank:]]*[N|Y][[:blank:]]*Y[[:blank]]*' vReviews.txt 
+  233  egrep '^US.*?\b[[:blank:]]*[N|Y][[:blank:]]*Y[[:blank:]]*' vReviews.txt 
+  234  egrep '^US.*?\b[[:blank:]]*[N|Y][[:blank:]]*Y\b[[:blank:]]' vReviews.txt 
+  235  egrep '^US.*?\b[[:blank:]]+[N|Y][[:blank:]]+Y\b[[:blank:]]+' vReviews.txt 
+  236  rm vReviews.txt
+  237  egrep 'US\s+[0-9]+\s+\S+\s+[0-9]+\s+ ama
+  238  egrep 'US\s+[0-9]+\s+\S+\s+[0-9]+\s+' amazon_reviews_us_Books_v1_02.tsv 
+  239  egrep 'US\s+[0-9]+\s+\S+\s+[0-9]+\s+[0-9]+' amazon_reviews_us_Books_v1_02.tsv 
+  240  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+' amazon_reviews_us_Books_v1_02.tsv 
+  241  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+[N|Y]\s+Y\s+' amazon_reviews_us_Books_v1_02.tsv 
+  242  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+[N|Y]' amazon_reviews_us_Books_v1_02.tsv 
+  243  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+' amazon_reviews_us_Books_v1_02.tsv 
+  244  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+[N|Y]' amazon_reviews_us_Books_v1_02.tsv 
+  245  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+\s+[N|Y]' amazon_reviews_us_Books_v1_02.tsv 
+  246  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+\s+[N|Y]\s+Y\s+' amazon_reviews_us_Books_v1_02.tsv 
+  247  touch verifiedReviews.txt
+  248  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+\s+[N|Y]\s+Y\s+' amazon_reviews_us_Books_v1_02.tsv > verifiedReviews.txt
+  249  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+\s+[N|Y]\s+N\s+' verifiedReviews.txt
+  250  touch unverifiedReviews.txt
+  251  egrep 'US.*?\s+Books\s+[0-9]\s+[0-9]+\s+[0-9]+\s+[N|Y]\s+N\s+' amazon_reviews_us_Books_v1_02.tsv > unverifiedReviews.txt 
+  252  wc -l verifiedReviews.txt
+  253  wc -l unverifiedReviews.txt 
+  254  wc amazon_reviews_us_Books_v1_02.tsv 
+  255  wc -l amazon_reviews_us_Books_v1_02.tsv 
+  256  touch counts.txt
+  257  wc -l -w verifiedReviews.txt > counts.txt 
+  258  wc -l -w unverifiedReviews.txt > counts.txt 
+  259  cat counts.txt
+  260  wc -l -w verifiedReviews.txt >> counts.txt 
+  261  cat counts.txt
+  262  vi counts.txt
+  263  cat counts.txt
+  264  wc --help
+  265  wc -w verifiedReviews.txt 
+  266  wc -w unverifiedReviews.txt 
+  267  vi unverifiedReviews.txt 
+  268  vi counts.tx
+  269  ls
+  270  vi counts.txt
+  271  cat counts.txt
+  272  wc -w amazon_reviews_us_Books_v1_02.tsv 
+  273  head --lines=1 amazon_reviews_us_Books_v1_02.tsv 
+  274  cat counts.txt
+  275  history > cmds.log
