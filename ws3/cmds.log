@@ -1,0 +1,161 @@
+  408  cd cs131/
+  409  ls
+  410  mkdir ws3
+  411  cp ws2/amazon_reviews_us_Books_v1_02.tsv ws3
+  412  cd ws3
+  413  ls
+  414  head amazon_reviews_us_Books_v1_02.tsv 
+  415  touch amazon_customer_id
+  416  sort amazon_reviews_us_Books_v1_02.tsv > amazon_customer_id 
+  417  ls
+  418  head amazon_customer_id 
+  419  less amazon_customer_id 
+  420  less
+  421  less amazon_
+  422  less amazon_customer_id 
+  423  exit
+  424  cd cs131/ws3
+  425  uniq -c amazon_customer_id 
+  426  uniq -c amazon_customer_id | head
+  427  cut -b 10-20 amazon_reviews_us_Books_v1_02.tsv 
+  428  cut -b 6-11 amazon_reviews_us_Books_v1_02.tsv 
+  429  cut -b 5-11 amazon_reviews_us_Books_v1_02.tsv 
+  430  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv 
+  431  cut -b 2-11 amazon_reviews_us_Books_v1_02.tsv 
+  432  head -10 amazon_reviews_us_Books_v1_02.tsv 
+  433  head -3 amazon_reviews_us_Books_v1_02.tsv 
+  434  cut -b 4,11 amazon_reviews_us_Books_v1_02.tsv 
+  435  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv 
+  436  rm amazon_customer_id 
+  437  head amazon_reviews_us_Books_v1_02.tsv 
+  438  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | uniq -c | sort
+  439  touch temp.txt
+  440  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | uniq -c > temp.txt
+  441  head temp.txt
+  442  sort temp.txt
+  443  ls
+  444  rm temp.txt 
+  445  alias lll 'ls -latr'
+  446  alias lll='ls -latr'
+  447  lll
+  448  ls -c
+  449  touch customer_most_reviews.txt
+  450  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv 
+  451  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | head -3 > customer_most_reviews.txt 
+  452  head customer_most_reviews.txt
+  453  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort | head -3 > customer_most_reviews.txt 
+  454  head customer_most_reviews.txt 
+  455  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort > customer_most_reviews.txt 
+  456  head customer_most_reviews.txt 
+  457  cd ..
+  458  ls
+  459  vim .bash_aliases
+  460  cat .bash_
+  461  cat .bash_aliases 
+  462  lll
+  463  vi ~/.bashrc
+  464  vi ~/.bash_aliases 
+  465  vi ~/.bashrc
+  466  vi ~/.bash_aliases 
+  467  vi ~/.bashrc
+  468  vi ~/.bash_aliases 
+  469  vi ~/.bashrc
+  470  lll
+  471  vi ~/.bashrc
+  472  vi
+  473  vi ~/.bashsrc
+  474  vi ~/.bashrc
+  475  lll
+  476  chown
+  477  $chown
+  478  echo $chown
+  479  $chown 'id -u' cs131
+  480  $chown `id -u` cs131
+  481  chown `id -u` cs131
+  482  chown
+  483  man chown
+  484  chown "id -u" cs131
+  485  ls
+  486  lll
+  487  ls -lat
+  488  ls -latr
+  489  vi .bashrc.swp
+  490  vi .bashrc
+  491  lll
+  492  vi .bashal
+  493  vi ~/.bash_aliases
+  494  vi ~/.bashrc
+  495  sudo
+  496  sudo vi /etc/passwd
+  497  sudo head
+  498  lls
+  499  ls
+  500  ll
+  501  lll
+  502  ll
+  503  alias
+  504  ls --color=red
+  505  ls
+  506  cd cs131
+  507  cd ws3
+  508  ls
+  509  less customer_most_reviews.txt 
+  510  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -n > customer_most_reviews.txt 
+  511  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -n -r > customer_most_reviews.txt 
+  512  head customer_most_reviews.txt 
+  513  head amazon_reviews_us_Books_v1_02.tsv 
+  514  cut -b 20-30 amazon_reviews_us_Books_v1_02.tsv 
+  515  cut -b 20-40 amazon_reviews_us_Books_v1_02.tsv 
+  516  cut -b 25-40 amazon_reviews_us_Books_v1_02.tsv 
+  517  cut -b 26-40 amazon_reviews_us_Books_v1_02.tsv 
+  518  cut -b 27-40 amazon_reviews_us_Books_v1_02.tsv 
+  519  head customer_most_reviews.txt 
+  520  head customer_most_reviews.txt > amazon_reviews_us_Books_v1_02.tsv 
+  521  cp ../ws2/amazon_reviews_us_Books_v1_02.tsv ws3
+  522  ls
+  523  cd ws3
+  524  ls -latr
+  525  rm ws3
+  526  cp ../ws2/amazon_reviews_us_Books_v1_02.tsv 
+  527  cp ../ws2/amazon_reviews_us_Books_v1_02.tsv .
+  528  ls
+  529  head amazon_reviews_us_Books_v1_02.tsv 
+  530  head customer_most_reviews.txt 
+  531  head -3 customer_most_reviews.txt > customer_most_reviews.txt 
+  532  head -3 customer_most_reviews.txt 
+  533  head customer_most_reviews.txt 
+  534  cat cus
+  535  cat customer_most_reviews.txt 
+  536  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -n -r > customer_most_reviews.txt 
+  537  head customer_most_reviews.txt 
+  538  head -3 customer_most_reviews.txt 
+  539  head -3 customer_most_reviews.txt > customer_most_reviews.txt 
+  540  head -3 customer_most_reviews.txt 
+  541  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -n -r > customer_most_reviews.txt 
+  542  cut -b 4-11 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -n -r | head -3  > customer_most_reviews.txt 
+  543  head customer_most_reviews.txt 
+  544  cut -f 4 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -3 
+  545  head amazon_reviews_us_Books_v1_02.tsv 
+  546  touch product_most_reviews.txt
+  547  cut -f 4 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -3 > product_most_reviews.txt 
+  548  head product_most_reviews.txt 
+  549  touch ws3.txt
+  550  head customer_most_reviews.txt >> ws3.txt
+  551  head product_most_reviews.txt >> ws3.txt
+  552  vi ws3.txt 
+  553  head ws3.txt
+  554  git status
+  555  git add ws3.txt 
+  556  git status
+  557  git push -u main master
+  558  git push -u origin master
+  559  git branch
+  560  git commit -m ws3: finished counts for customers and products
+  561  git commit -m ws3: "finished counts for customers and products"
+  562  git commit -m "ws3: finished counts for customers and products"
+  563  git push -u main master
+  564  git push -u master main
+  565  git push -u origin master
+  566  git branch
+  567  git push
+  568  history > cmds.log
