@@ -1,0 +1,103 @@
+  706  vi ~/.bashrc
+  707  source ~/.bash_aliases
+  708  l
+  709  s
+  710  w
+  711  pwd
+  712  ls
+  713  cd ../ws4
+  714  ls
+  715  mkdir CUSTOMERS
+  716  mkdir PRODUCTS
+  717  head amazon_reviews_us_Books_v1_02.tsv 
+  718  less amazon_reviews_us_Books_v1_02.tsv 
+  719  touch CUSTOMERS/customerID.txt
+  720  grep amazon_reviews_us_Books_v1_02.tsv '12076615'
+  721  grep '12076615' amazon_reviews_us_Books_v1_02.tsv
+  722  grep '12076615' amazon_reviews_us_Books_v1_02.tsv | cut -d '\t' -f 8 > CUSTOMERS/customerID.txt
+  723  grep '12076615' amazon_reviews_us_Books_v1_02.tsv | cut -f 8 > CUSTOMERS/customerID.txt
+  724  head CUSTOMERS/customerID.txt 
+  725  # > CUSTOMERS/customerID.txt 
+  726  ls
+  727  head amazon_reviews_us_Books_v1_02.tsv 
+  728  cd ws3
+  729  cd ../ws3
+  730  ls
+  731  head customer_most_reviews.txt 
+  732  cd ../ws4
+  733  grep '50122160' amazon_reviews_us_Books_v1_02.tsv 
+  734  grep '50122160' amazon_reviews_us_Books_v1_02.tsv | cut -f 8
+  735  grep '50122160' amazon_reviews_us_Books_v1_02.tsv | head -5
+  736  head amazon_reviews_us_Books_v1_02.tsv 
+  737  less amazon_reviews_us_Books_v1_02.tsv 
+  738  grep '50122160' amazon_reviews_us_Books_v1_02.tsv | cut -f 9
+  739  grep '50122160' amazon_reviews_us_Books_v1_02.tsv | cut -f 9 > CUSTOMERS/customerID.txt
+  740  head -10 CUSTOMERS/customerID.txt 
+  741  head ../ws3/product_most_reviews.txt 
+  742  grep '04395806X' amazon_reviews_us_Books_v1_02.tsv 
+  743  grep '043935806X' amazon_reviews_us_Books_v1_02.tsv 
+  744  touch PRODUCTS/productID.txt
+  745  grep '043935806X' amazon_reviews_us_Books_v1_02.tsv | cut -f 9 > PRODUCTS/productID.txt 
+  746  head PRODUCTS/productID.txt 
+  747  head ../ws3/customer_most_reviews.txt 
+  748  mv CUSTOMERS/customerID.txt CUSTOMERS/50122160.txt
+  749  mv PRODUCTS/productID.txt PRODUCTS/043935806X.txt
+  750  ls CUSTOMERS/
+  751  ls PRODUCTS/
+  752  echo "total=0;for(i=0;i<{wc -l CUSTOMERS/50122160.txt};i++){i+=3}" | bc
+  753  touch compute_average.sh
+  754  vi compute_average.sh 
+  755  ls
+  756  pwd
+  757  sh compute_average.sh CUSTOMERS/50122160.txt 
+  758  vi compute_average.sh 
+  759  sh compute_average.sh CUSTOMERS/50122160.txt 
+  760  wc -l CUSTOMERS/50122160.txt 
+  761  sh compute_average.sh CUSTOMERS/50122160.txt 
+  762  vi compute_average.sh 
+  763  who 
+  764  who | wc -l | cut -f 1
+  765  touch temp.txt
+  766  who > temp.txt 
+  767  wc -l temp.txt > temp.txt
+  768  cat temp.txt
+  769  wc -l temp.txt 
+  770  sh compute_average.sh 
+  771  sh compute_average.sh CUSTOMERS/cus
+  772  sh compute_average.sh CUSTOMERS/50122160.txt 
+  773  vi compute_average.sh 
+  774  sh compute_average.sh CUSTOMERS/50122160.txt 
+  775  vi compute_average.sh 
+  776  wc CUSTOMERS/50122160.txt 
+  777  wc -l CUSTOMERS/50122160.txt 
+  778  wc -l CUSTOMERS/50122160.txt | cut -f 1
+  779  wc -l CUSTOMERS/50122160.txt | cut -d " " -f 1
+  780  vi compute_average.sh 
+  781  sh compute_average.sh CUSTOMERS/50122160.txt 
+  782  vi compute_average.sh 
+  783  sh compute_average.sh CUSTOMERS/50122160.txt 
+  784  vi compute_average.sh 
+  785  sh compute_average.sh CUSTOMERS/50122160.txt 
+  786  vi compute_average.sh 
+  787  #
+  788  # > compute_average.sh 
+  789  vi compute_average.sh 
+  790  #> compute_average.sh 
+  791  vi compute_average.sh 
+  792  # > compute_average.sh 
+  793  head compute_average.sh 
+  794  vi compute_average.sh 
+  795  sh compute_average.sh 
+  796  vi compute_average.sh 
+  797  sh compute_average.sh 
+  798  sh compute_average.sh CUSTOMERS/50122160.txt 
+  799  awk '{ total += $1; count++ } END { print total/count }' CUSTOMERS/50122160.txt 
+  800  vi CUSTOMERS/50122160.txt 
+  801  awk '{ total += $1; count++ } END { print total/count }' PRODUCTS/043935806X.txt 
+  802  vi PRODUCTS/
+  803  vi PRODUCTS/043935806X.txt 
+  804  head PRODUCTS/043935806X.txt 
+  805  head CUSTOMERS/50122160.txt 
+  806  history
+  807  touch cmds.log
+  808  history > cmds.log 
