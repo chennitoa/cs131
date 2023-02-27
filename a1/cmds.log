@@ -1,0 +1,32 @@
+  823  cd cs131
+  824  mkdir a1
+  825  script > a1.txt
+  826  cd cs131/a1
+  827  ls
+  828  script a1.txt
+  829  history > cmds.log
+  830  ls
+  831  git add a1.txt
+  832  git add cmds.log
+  833  vi a1.txt
+  834  cd ..
+  835  mkdir a1
+  836  script a1alt.text
+  837  rm a1alt.text 
+  838  cd a1
+  839  rm temp temp3 temp4
+  840  rm -r temp temp3 temp4
+  841  cd ..
+  842  mv a1 a1alt
+  843  ls
+  844  rm a1.txt 
+  845  cat typescript 
+  846  rm typescript 
+  847  script a1.txt
+  848  vi a1.txt 
+  849  mv a1.txt ./a1
+  850  cd a1
+  851  ls
+  852  cat a1.txt
+  853  ls
+  854  history > cmds.log

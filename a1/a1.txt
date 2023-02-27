@@ -1,0 +1,452 @@
+Script started on 2023-02-27 01:28:37-05:00
+
+1.
+bash-4.4$ mkdir a1
+bash-4.4$ cd a1
+
+
+2.
+bash-4.4$ echo $HOME
+/mnt/scratch/austin23sp
+
+$HOME stores the home directory, and echo prints that home directory.
+
+
+3.
+bash-4.4$ id
+uid=1043(austin23sp) gid=1045(austin23sp) groups=1045(austin23sp)
+
+My UID is 1043. I belong to group 1045, austin23sp. id command shows this.
+
+
+4.
+bash-4.4$ mkdir temp
+bash-4.4$ chmod u-x temp
+bash-4.4$ ls temp
+bash-4.4$ ls -l temp
+total 0
+bash-4.4$ cd temp
+bash: cd: temp: Permission denied
+bash-4.4$ touch temp/abc.txt
+touch: cannot touch 'temp/abc.txt': Permission denied
+
+cd: no   ls: yes   ls -l: yes   create files: no
+
+
+5.
+bash-4.4$ mkdir temp2
+bash-4.4$ mv temp3 [K[K2 temp3
+bash-4.4$ cp temp3 temp4
+cp: -r not specified; omitting directory 'temp3'
+bash-4.4$ cp -r temp3 temp4
+
+mv: yes   cp: yes, but you have to use -r   To cp an entire directory, use cp -r (directory to be copied) (destination directory)
+
+
+6.
+bash-4.4$ ls /proc/ | tail -n 100
+956
+957
+959
+96
+960
+961
+962
+963
+965
+966
+967
+968
+969
+97
+971
+972
+973
+974
+975
+977
+978
+979
+98
+980
+981
+983
+984
+985
+986
+987
+989
+990
+991
+992
+993
+995
+996
+997
+998
+999
+buddyinfo
+bus
+cgroups
+cmdline
+consoles
+cpuinfo
+crypto
+devices
+device-tree
+diskstats
+dma
+driver
+execdomains
+fb
+filesystems
+fs
+interrupts
+iomem
+ioports
+irq
+kallsyms
+kcore
+keys
+key-users
+kmsg
+kpagecgroup
+kpagecount
+kpageflags
+loadavg
+locks
+mdstat
+meminfo
+misc
+modules
+mounts
+net
+pagetypeinfo
+partitions
+powerpc
+ppc64
+rtas
+sched_debug
+schedstat
+scsi
+self
+slabinfo
+softirqs
+stat
+swaps
+sys
+sysrq-trigger
+sysvipc
+thread-self
+timer_list
+tty
+uptime
+version
+vmallocinfo
+vmstat
+zoneinfo
+bash-4.4$ ls proc/cpuinfo
+ls: cannot access 'proc/cpuinfo': No such file or directory
+bash-4.4$ ls proc/[K[K[K[K[K/proc/cpuinfo
+/proc/cpuinfo
+bash-4.4$ ls /proc/meminfo
+/proc/meminfo
+
+/proc/cpuinfo and /proc/meminfo have the cpu and memory info on the server respectively.
+
+
+7.
+bash-4.4$ head /proc/meminfo
+MemTotal:       73080640 kB
+MemFree:        11966016 kB
+MemAvailable:   19955520 kB
+Buffers:          322624 kB
+Cached:         12028928 kB
+SwapCached:       105280 kB
+Active:          9297408 kB
+Inactive:        3825600 kB
+Active(anon):    2602240 kB
+Inactive(anon):  1806656 kB
+
+Total memory available on the server is 73080640 KB = ~73 GB
+
+
+8.
+bash-4.4$ head /proc/cpuinfo
+processor	: 0
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 1
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+bash-4.4$ tail /proc//cpu[K[K[K[Kcpuinfo
+processor	: 255
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+timebase	: 512000000
+platform	: pSeries
+model		: IBM,8286-42A
+machine		: CHRP IBM,8286-42A
+MMU		: Hash
+bash-4.4$ cat cpu[K[K[K/[[Kproc/cpuinfo 
+processor	: 0
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 1
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 2
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 3
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 4
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 5
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 6
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 7
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 8
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 9
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 10
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 11
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 12
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 13
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+(remainder of cat output omitted for brevity...)
+
+processor	: 251
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 252
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 253
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 254
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 255
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+timebase	: 512000000
+platform	: pSeries
+model		: IBM,8286-42A
+machine		: CHRP IBM,8286-42A
+MMU		: Hash
+
+There are 256 total processors on the server. The processor architecture name is POWER8, and the processor speed is 3525 MHz = ~3 GHz
+
+
+9.
+bash-4.4$ cp /home/test/A1/downloaded_hashtags_extend.csv .
+bash-4.4$ ls -l
+total 7652
+-rw-r--r-- 1 austin23sp austin23sp 7822180 Feb 27 01:34 downloaded_hashtags_extend.csv
+drw-rwxr-x 2 austin23sp austin23sp    4096 Feb 27 01:29 temp
+drwxrwxr-x 2 austin23sp austin23sp    4096 Feb 27 01:29 temp3
+drwxrwxr-x 2 austin23sp austin23sp    4096 Feb 27 01:30 temp4
+
+The file is approximately 7822180 bytes = ~0.007 GB = ~7 MB
+
+
+10.
+bash-4.4$ wc -l downloaded_hashtags_extend.csv 
+110350 downloaded_hashtags_extend.csv
+bash-4.4$ grep --ignore-case -e "great" downloaded_hashtags_extend.csv 
+308045021,greatday,2022-04-16 21:58:59+00:00,1515449703730720778
+631283641,thegreatdebate,2022-02-14 21:07:09+00:00,1493330997718487045
+86010091,thegreattranslationmovement,2022-04-28 00:50:21+00:00,1519479095989465088
+1387010761994682371,thegreatbritishmortgageswindle,2022-04-04 09:23:07+00:00,1510910830036013060
+17531651,greatblueheron,2022-01-29 14:01:48+00:00,1487425749929787392
+950215424981028864,greateggcasehunt,2022-03-07 20:45:19+00:00,1500935649435828226
+3453306553,scottythegreatpretender,2022-03-17 09:13:22+00:00,1504385392703057922
+828578052942741505,greatbritain,2022-03-04 11:05:14+00:00,1499702504002662406
+302984766,greatergood,2022-02-13 14:17:01+00:00,1492865396461948930
+2574271742,scottythegreatpretender,2022-03-17 07:29:48+00:00,1504359329532870657
+41186732,greatwallofstupidity,2022-03-11 13:03:28+00:00,1502268971596357636
+804582780298412032,greatbarringtondeclaration,2022-01-23 17:41:12+00:00,1485306636025565188
+804582780298412032,greatbarringtondeclaration,2022-01-23 17:37:46+00:00,1485305771009069057
+804582780298412032,greatbarringtondeclaration,2022-01-21 01:16:29+00:00,1484334048998612995
+804582780298412032,greatbarringtondeclaration,2022-01-18 18:50:12+00:00,1483512063322251267
+804582780298412032,greatbarringtondeclaration,2022-01-15 03:14:02+00:00,1482189305929822214
+804582780298412032,greatbarringtondeclaration,2022-01-05 02:55:31+00:00,1478560765636272129
+804582780298412032,greatbarringtondeclaration,2022-01-04 05:37:34+00:00,1478239160800399366
+804582780298412032,greatbarringtondeclaration,2022-01-04 01:28:58+00:00,1478176598402560001
+804582780298412032,greatbarringtondeclaration,2022-01-03 19:27:39+00:00,1478085668802744320
+804582780298412032,greatbarringtondeclaration,2022-01-01 07:04:18+00:00,1477173821970923520
+2574271742,greatbarrierreef,2022-01-27 23:09:44+00:00,1486838867709739008
+1255626720578867202,greatreset,2022-04-27 19:57:41+00:00,1519405442438508544
+1494715792474230788,thegreatresist,2022-03-20 16:32:37+00:00,1505583095952588807
+2530758806,ourgreatnationalparks,2022-03-18 02:27:40+00:00,1504645684049289220
+614600545,maketwittergreatagain,2022-04-25 19:33:25+00:00,1518674561247633409
+41653384,greatthread,2022-04-19 14:53:20+00:00,1516429748498575375
+1060440219097423872,americasgreatestmistake,2022-03-21 00:36:31+00:00,1505704874616446979
+1264114113925402624,greatdancecrew,2022-04-23 12:56:00+00:00,1517849770752020481
+1264114113925402624,greatdancecrew,2022-04-23 12:55:55+00:00,1517849749927325698
+1264114113925402624,greatdancecrew,2022-04-21 14:54:29+00:00,1517154813485584385
+1261203450022359043,greatdancecrew,2022-04-30 12:11:48+00:00,1520375364794474496
+1261203450022359043,greatdancecrew,2022-04-23 12:26:22+00:00,1517842315334742016
+1261203450022359043,greatdancecrew,2022-04-23 11:56:35+00:00,1517834817366233088
+1261203450022359043,greatdancecrew,2022-04-23 11:55:45+00:00,1517834609546850304
+1261203450022359043,greatdancecrew,2022-04-23 11:50:55+00:00,1517833390828908545
+1261203450022359043,greatdancecrew,2022-04-22 14:26:23+00:00,1517510130492878849
+1261203450022359043,greatdancecrew,2022-04-17 05:58:33+00:00,1515570390088572928
+1261203450022359043,greatdancecrew,2022-04-16 15:10:02+00:00,1515346786671464453
+1261203450022359043,greatdancecrew,2022-04-16 14:50:49+00:00,1515341951997935622
+1261203450022359043,tenxgreatdancecrew,2022-04-09 11:10:50+00:00,1512749874650894345
+1261203450022359043,greatdancecrew,2022-04-08 03:00:30+00:00,1512264090911055872
+29447428,lovegreatbritain,2022-01-11 15:42:11+00:00,1480928032256888836
+1261203450022359043,greatdancecrew,2022-02-27 05:12:57+00:00,1497801907359797251
+1261203450022359043,greatdancecrew,2022-02-26 16:03:44+00:00,1497603296009146369
+505069575,greatwesterncatskills,2022-04-05 22:27:17+00:00,1511470557925199875
+1174041837692211200,greatbarrington,2022-03-17 11:07:54+00:00,1504414217360887812
+505069575,greatwesterncatskills,2022-04-05 22:27:17+00:00,1511470557925199875
+1174041837692211200,greatbarrington,2022-03-17 11:07:54+00:00,1504414217360887812
+3130247577,allcreaturesgreatandsmall,2022-01-10 06:27:13+00:00,1480425982699970564
+943925946,greatMMMMMM,2022-03-11 11:37:07+00:00,1502247243860033536
+135624348,thegreat,2022-02-08 00:17:29+00:00,1490842184178073600
+36902944,greatreset,2022-03-02 19:06:06+00:00,1499098742733033475
+2556967117,thegreatopioidlie,2022-04-27 13:39:24+00:00,1519310245557846017
+741282999031894016,great,2022-02-22 00:07:55+00:00,1495913206354743296
+2556967117,greatopioidlie,2022-02-05 18:27:43+00:00,1490029387210805253
+2556967117,greatopioidlie,2022-01-28 13:30:56+00:00,1487055594347548674
+bash-4.4$ grep --ignore-case -e "great" downloaded_hashtags_extend.csv  | wc -l
+57
+
+There are 57 hashtags including the word "great" including duplicates.
+
+
+11.
+bash-4.4$ file downloaded_hashtags_extend.csv 
+downloaded_hashtags_extend.csv: UTF-8 Unicode text
+
+The character encoding is UTF-8 Unicode.
+
+
+12.
+bash-4.4$ iconv > [K[K- [Kt ascii [C[C[1@-[1@c[1@ [C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktouch downloaded_hashtags_extend.csv [C[C[1@_[1@c[1@o[1@n[1@v[1@e[1@r[1@t[1@e[1@d
+bash-4.4$ touch downloaded_hashtags_extend_converted.csv [C[C[C[C[C[C[C[C[C[C[11Pfile downloaded_hashtags_exten[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11@touch downloaded_hashtags_extend_converte[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kiconv -c -t ascii > downloaded_hashtags_extend
+^C
+bash-4.4$ iconv -c -t ascii > downloaded_hashtags_extend_converted.csv 
+^C
+bash-4.4$ iconv -c -t ascii > downloaded_hashtags_extend_converted.csv [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K| head -c 10
+^C
+bash-4.4$ iconv -c -t ascii | head -c 10[C[K[K[K[K[K[K[K[K[K[K[K[Kdownloaded_hashtags_extend.csv > downloaded_hashtags_extend_converted.csv 
+
+-c was used here because the file contained some invalid characters
+
+
+13.
+bash-4.4$ head downloaded_hashtags_extend.csv 
+author,hashtags,date,id
+308045021,awesomepeopleontwitter,2022-04-30 23:18:45+00:00,1520543208614334465
+308045021,journalism,2022-04-30 20:40:18+00:00,1520503332246376448
+308045021,npr,2022-04-30 20:40:18+00:00,1520503332246376448
+308045021,lc,2022-04-29 22:28:54+00:00,1520168272896962562
+308045021,exercise,2022-04-29 22:28:54+00:00,1520168272896962562
+308045021,buddhism,2022-04-29 14:52:29+00:00,1520053412968210432
+308045021,buddhism,2022-04-29 14:16:51+00:00,1520044444204032001
+308045021,obgyntwitter,2022-04-29 02:47:33+00:00,1519870977311715328
+308045021,busymom,2022-04-28 21:20:34+00:00,1519788687957049344
+bash-4.4$ hea [Kd downloaded_hashtags_extend_convw[Kerted.csv 
+author,hashtags,date,id
+308045021,awesomepeopleontwitter,2022-04-30 23:18:45+00:00,1520543208614334465
+308045021,journalism,2022-04-30 20:40:18+00:00,1520503332246376448
+308045021,npr,2022-04-30 20:40:18+00:00,1520503332246376448
+308045021,lc,2022-04-29 22:28:54+00:00,1520168272896962562
+308045021,exercise,2022-04-29 22:28:54+00:00,1520168272896962562
+308045021,buddhism,2022-04-29 14:52:29+00:00,1520053412968210432
+308045021,buddhism,2022-04-29 14:16:51+00:00,1520044444204032001
+308045021,obgyntwitter,2022-04-29 02:47:33+00:00,1519870977311715328
+308045021,busymom,2022-04-28 21:20:34+00:00,1519788687957049344
+bash-4.4$ head downloaded_hashtags_extend_converted.csv [10P[C[C[C[C[C
+author,hashtags,date,id
+308045021,awesomepeopleontwitter,2022-04-30 23:18:45+00:00,1520543208614334465
+308045021,journalism,2022-04-30 20:40:18+00:00,1520503332246376448
+308045021,npr,2022-04-30 20:40:18+00:00,1520503332246376448
+308045021,lc,2022-04-29 22:28:54+00:00,1520168272896962562
+308045021,exercise,2022-04-29 22:28:54+00:00,1520168272896962562
+308045021,buddhism,2022-04-29 14:52:29+00:00,1520053412968210432
+308045021,buddhism,2022-04-29 14:16:51+00:00,1520044444204032001
+308045021,obgyntwitter,2022-04-29 02:47:33+00:00,1519870977311715328
+308045021,busymom,2022-04-28 21:20:34+00:00,1519788687957049344
+bash-4.4$ uni[K[K[Kcut -d "," -f 1 | uniq -c [K[K[K[K[K[K[K[Ko[Ksort | uniq -c | [K[K[K[K[K| wc -l
+^C
+bash-4.4$ cut -d "," -f 1 | sort | uniq | wc -l [C[C[1@ [1@d[1@o[1@w[23@nloaded_hashtags_extend[1@.[3@csv
+177
+bash-4.4$ cut -d "," -f 1 downloaded_hashtags_extend.csv | sort | uniq | wc -l [C[C[C[C[C[C[C[1@-[1@c[1@ 
+177
+bash-4.4$ cut -d "," -f 1 downloaded_hashtags_extend.csv | sort | uniq -c | wc -l [1P[1P[1P[C[C[C[C[C[1P[1@4
+64698
+bash-4.4$ cut -d "," -f 4 downloaded_hashtags_extend.csv | sort | uniq | wc -l [1P[1@2
+20258
+bash-4.4$ exit
+
+There are 177 unique users, 64698 unique tweets, and 20258 unique hashtags in this file. There are less hashtags than tweets.
+
+
+Script done on 2023-02-27 01:42:07-05:00
