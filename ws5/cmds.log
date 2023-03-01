@@ -1,0 +1,129 @@
+  981  ls
+  982  cd cs131
+  983  ls
+  984  mkdir ws5
+  985  cd ..
+  986  cd ws3
+  987  ls
+  988  cd cs131
+  989  cd ws3
+  990  ls
+  991  cp amazon_reviews_us_Books_v1_02.tsv ws5
+  992  bg
+  993  cd ..
+  994  cd ws5
+  995  ls
+  996  jobs
+  997  ls
+  998  touch cstmr_review_redirect.sh
+  999  ls
+ 1000  l
+ 1001  ll
+ 1002  source ~./bash_aliases
+ 1003  ls ~
+ 1004  ls -latr ~
+ 1005  source ~./bash_aliases
+ 1006  source ~/bashrc
+ 1007  source ~/.bashrc
+ 1008  l
+ 1009  ls
+ 1010  jobs
+ 1011  pwd
+ 1012  cd ..
+ 1013  ls
+ 1014  cd ws3
+ 1015  ls
+ 1016  ls ws5
+ 1017  cd ws5
+ 1018  ls
+ 1019  rm ws5
+ 1020  cp amazon_reviews_us_Books_v1_02.tsv ../ws5
+ 1021  cd ..
+ 1022  ls
+ 1023  cd ws5
+ 1024  ls
+ 1025  vi cstmr_review_redirect.sh 
+ 1026* head amazon_reviews_us_Books_v1_02.tsv 12076615amazon_reviews_us_Books_v1_02.tsv
+ 1027  vi cstmr_review_redirect.sh 
+ 1028  sh cstmr_review_redirect.sh 
+ 1029  vi cstmr_review_redirect.sh 
+ 1030  sh cstmr_review_redirect.sh 
+ 1031  vi cstmr_review_redirect.sh 
+ 1032  tmux
+ 1033  vi cstmr_review_redirect.sh 
+ 1034  tmux
+ 1035  sh cstmr_review_redirect.sh 
+ 1036  vi cstmr_review_redirect.sh 
+ 1037  sh cstmr_review_redirect.sh 
+ 1038  vi cstmr_review_redirect.sh 
+ 1039  sh cstmr_review_redirect.sh 
+ 1040  bg
+ 1041  fg
+ 1042  vi cstmr_review_redirect.sh 
+ 1043  sh cstmr_review_redirect.sh 
+ 1044  vi cstmr_review_redirect.sh 
+ 1045  sh cstmr_review_redirect.sh 
+ 1046  vi cstmr_review_redirect.sh 
+ 1047  sh cstmr_review_redirect.sh 
+ 1048  cut -d " " -f 2 amazon_reviews_us_Books_v1_02.tsv 
+ 1049  cut -d "\t" -f 2 amazon_reviews_us_Books_v1_02.tsv 
+ 1050  cut -d '\t' -f 2 amazon_reviews_us_Books_v1_02.tsv 
+ 1051  cut -d -f 2 amazon_reviews_us_Books_v1_02.tsv 
+ 1052  cut -f 2 amazon_reviews_us_Books_v1_02.tsv 
+ 1053  vi cstmr_review_redirect.sh 
+ 1054  sh cstmr_review_redirect.sh 
+ 1055  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | head -n 10
+ 1056  vi cstmr_review_redirect.sh 
+ 1057  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | head
+ 1058  sh cstmr_review_redirect.sh 
+ 1059  vi cstmr_review_redirect.sh 
+ 1060  sh cstmr_review_redirect.sh 
+ 1061  vi cstmr_review_redirect.sh 
+ 1062  sh cstmr_review_redirect.sh 
+ 1063  mkdir CUSTOMERS
+ 1064  sh cstmr_review_redirect.sh 
+ 1065  vi cstmr_review_redirect.sh 
+ 1066  sh cstmr_review_redirect.sh 
+ 1067  ls
+ 1068* 
+ 1069  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -n -r | cut -f 2 | head -n 200 > topCustomers.txt 
+ 1070  head topCustomers.txt 
+ 1071  grep "50122160" amazon_reviews_us_Books_v1_02.tsv | wc -l
+ 1072  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -n -r | cut -d " " -f 2 | head -n 200 > topCustomers.txt 
+ 1073  head topCustomers.txt 
+ 1074  cat topCustomers.txt 
+ 1075  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -n -r | cut -f 2 | head -n 200 > topCustomers.txt 
+ 1076  head topCustomers.txt 
+ 1077  vi topCustomers.txt 
+ 1078  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -n -r | awk '{print $2}' | head -n 200 > topCustomers.txt 
+ 1079  head topCustomers.txt 
+ 1080  ls
+ 1081  vi cstmr_review_redirect.sh 
+ 1082  sh cstmr_review_redirect.sh 
+ 1083  vi cstmr_review_redirect.sh 
+ 1084  sh cstmr_review_redirect.sh 
+ 1085  vi cstmr_review_redirect.sh 
+ 1086  sh cstmr_review_redirect.sh 
+ 1087  vi cstmr_review_redirect.sh 
+ 1088  sh cstmr_review_redirect.sh 
+ 1089  vi cstmr_review_redirect.sh 
+ 1090  sh cstmr_review_redirect.sh 
+ 1091  vi cstmr_review_redirect.sh 
+ 1092  sh cstmr_review_redirect.sh 
+ 1093  vi cstmr_review_redirect.sh 
+ 1094  sh cstmr_review_redirect.sh 
+ 1095  vi cstmr_review_redirect.sh 
+ 1096  sh cstmr_review_redirect.sh 
+ 1097  ls
+ 1098  cd CUSTOMERS
+ 1099  ls
+ 1100  wc -l 50122160.txt
+ 1101  wc -l 50774468.txt 
+ 1102  cd ..
+ 1103  cd CUSTOMERS/
+ 1104  head 50122160.txt
+ 1105  cd ..
+ 1106  clear
+ 1107  ls
+ 1108  git add CUSTOMERS
+ 1109  history > cmds.log
