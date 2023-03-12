@@ -1,0 +1,124 @@
+Script started on 2023-03-11 19:14:33-05:00
+
+1. Top 10 Users who replied the most to other users
+bash-4.4$ grep "\s\[<ReferencedTweet id=[0-9]* type=replied_to\]" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -n 10
+    106 380648579
+    104 18831926
+     83 16050065
+     45 1240682348120866816
+     35 1094971056358637568
+     34 140496030
+     34 1387010761994682371
+     32 172323296
+     27 117810351
+     19 1573800344
+
+2. Top 10 Users who got the most replies
+bash-4.4$ grep "\s\[<ReferencedTweet id=[0-9]* type=replied_to\]" downloaded_tweets_extend_original_nolf2.tsv | cut -f 6 | sort | uniq -c | sort -nr | head -n 10
+    112 18831926
+    107 380648579
+     83 16050065
+     45 3453306553
+     37 1094971056358637568
+     34 140496030
+     32 172323296
+     30 29447428
+     30 1240682348120866816
+     29 117810351
+
+3. Top 10 Users who retweeted the most
+bash-4.4$ grep "\s\[<ReferencedTweet id=[0-9]* type=retweeted\] downloaded_tweets_extend_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -n 10
+   2065 45379403
+   1678 77726331
+   1641 870244616003403781
+   1582 1028022611324747776
+   1312 711608180535640064
+   1281 139109800
+   1234 177400353
+   1216 832019161454817280
+   1159 29447428
+   1139 1060440219097423872
+
+4. Top 30 Hashtags, two ways
+	a. Lazy Method
+bash-4.4$ cut -f  4 downloaded_tweets_extend_nolf2.tsv | sort | uniq -c | sort -nr | head -n 31 | tail -n 30
+   1266 Ukraine
+    945 COVID19
+    870 LongCovid
+    833 "FBPE,FollowBackFriday"
+    320 Russia
+    305 BREAKING
+    257 PMQs
+    208 auspol
+    181 StandWithUkraine
+    177 AmiesMovieRating
+    176 Omicron
+    168 Mariupol
+    136 Kyiv
+    135 BA2
+    122 "Russia,Ukraine"
+    120 COVID
+    118 Bales2022FilmChallenge
+    111 Putin
+    108 COVIDisAirborne
+    107 "PutinHitler,StandWithUkraine,PutinHitler,PutinWarCriminal,StopPutinNOW,RussiaSanctions,BoycottRussia"
+    107 ClimateCrisis
+    106 BoycottATP
+    105 Russian
+     98 "cathrynhartt,harttandsoul,actor,actorslife"
+     97 Covid19
+     93 Partygate
+     87 TikTok
+     85 longcovid
+     80 Ottawa
+     79 Brexit
+
+	b. Not lazy method, multiple hashtags are parsed and seperated
+bash-4.4$ cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep "\".*\"" | tr -d '"' | sed 's/,/\n/g' | head
+journalism
+NPR
+LC
+exercise
+ImmunizeUnder5s
+CovidIsntOver
+TakingABreak
+exercise
+bbcnews
+LongCovid
+bash-4.4$ touch tmp.txt
+bash-4.4$ cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep "\".*\"" | tr -d '"' | sed 's/,/\n/g' > tmp.txt
+bash-4.4$ cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep -v "\".*\"" >> tmp.txt
+bash-4.4$ sort tmp.txt | uniq -c | sort -nr | head -n 31 | tail -n 30
+   2823 Ukraine
+   1609 COVID19
+   1115 Russia
+   1110 LongCovid
+    895 FBPE
+    894 FollowBackFriday
+    782 StandWithUkraine
+    536 PutinHitler
+    476 Russian
+    406 Putin
+    405 Omicron
+    366 BREAKING
+    363 auspol
+    357 Mariupol
+    343 bcpoli
+    337 Kyiv
+    319 ableg
+    305 StopPutinNOW
+    292 COVIDisAirborne
+    282 PMQs
+    280 เจ้าแก้มก้อน
+    274 PutinWarCriminal
+    269 Ottawa
+    263 RussiaSanctions
+    263 Genocide
+    260 BoycottRussia
+    258 Ukrainian
+    252 VoteFordOut
+    239 onpoli
+    239 cdnpoli
+bash-4.4$ exit
+
+Script done on 2023-03-11 19:22:35-05:00

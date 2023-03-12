@@ -1,0 +1,62 @@
+ 1002  mkdir a2
+ 1003  cd a2
+ 1004  script a2.txt
+ 1005* rm a2.txt 
+ 1006  cp /home/test/A1/downloaded_tweets_extend_nolf2.tsv
+ 1007  cp /home/test/A1/downloaded_tweets_extend_nolf2.tsv .
+ 1008  cp /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv
+ 1009  cp /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv .
+ 1010  ls
+ 1011  l
+ 1012  source ~/.bashrc
+ 1013  l
+ 1014  clear
+ 1015  less downloaded_tweets_extend_nolf2.tsv 
+ 1016  less downloaded_tweets_extend_original_nolf2.tsv 
+ 1017  grep "\s[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv 
+ 1018  grep "\s\[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv 
+ 1019  grep "\s\[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2
+ 1020  grep "\s\[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv | cut -f 1
+ 1021  grep "\s\[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv 
+ 1022  head downloaded_tweets_extend_original_nolf2.tsv 
+ 1023  grep "\s\[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -n | head -count=10
+ 1024  grep "\s\[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -n | head -c=10
+ 1025  grep "\s\[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -n | head -n=10
+ 1026  grep "\s\[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -n | head -n 10
+ 1027  grep "\s\[<ReferencedTweet id=" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -n 10
+ 1028  wc -l downloaded_tweets_extend_original_nolf2.tsv 
+ 1029  grep "18831926" downloaded_tweets_extend_original_nolf2.tsv | wc -l
+ 1030  grep "\s\[<ReferencedTweet id=[0-9]* type=replied_to\]" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -n 10
+ 1031  grep "\s\[<ReferencedTweet id=[0-9]* type=replied_to\]" downloaded_tweets_extend_original_nolf2.tsv | cut -f 6 | sort | uniq -c | sort -nr | head -n 10
+ 1032  less downloaded_tweets_extend_nolf2.tsv 
+ 1033  grep "\s\[<ReferencedTweet id=[0-9]* type=retweeted\]" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -n 10
+ 1034  less downloaded_tweets_extend_nolf2.tsv 
+ 1035  grep "\s\[<ReferencedTweet id=[0-9]* type=retweeted\]" downloaded_tweets_extend_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -n 10
+ 1036  wc -l downloaded_tweets_extend_nolf2.tsv 
+ 1037  less downloaded_tweets_extend_nolf2.tsv 
+ 1038  cut -f 3 downloaded_tweets_extend_nolf2.tsv 
+ 1039  cut -f 4 downloaded_tweets_extend_nolf2.tsv 
+ 1040  cut -f 4 downloaded_tweets_extend_nolf2.tsv | sort | uniq -c | sort -nr | head -n 30
+ 1041  cut -f 4 downloaded_tweets_extend_nolf2.tsv | sort | uniq -c | sort -nr | head -n 31 | tail -n 30
+ 1042  touch tmp
+ 1043  touch tmp.txt
+ 1044  rm tmp
+ 1045  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep "\".*\""
+ 1046  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep "\".*\"" | tr -d '"' | sed 's/,/\n/g'
+ 1047  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep "\".*\"" | tr -d '"' | sed 's/,/\n/g' > tmp.txt
+ 1048  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep -v "\".*\"" 
+ 1049  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep -v "\".*\"" | grep -v "\s*" 
+ 1050  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep -v "\".*\"" | grep -v -e "\s*" 
+ 1051  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep -v "\".*\"" | grep -v "\S*" 
+ 1052  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep -v "\".*\"" | grep "\S*" 
+ 1053  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep -v "\".*\"" >> tmp.txt
+ 1054  sort tmp.txt | uniq -c | sort -nr | head -n 30
+ 1055  sort tmp.txt | uniq -c | sort -nr | head -n 31 | tail -n 30
+ 1056  clear
+ 1057  grep tmp.txt "a"
+ 1058  grep "a" tmp.txt 
+ 1059  rm tmp.txt
+ 1060  ls
+ 1061  script a2.txt
+ 1062  vi a2.txt
+ 1063  history > cmds.log
