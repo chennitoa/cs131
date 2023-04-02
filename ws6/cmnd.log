@@ -1,0 +1,221 @@
+  851  cd cs131/
+  852  ls
+  853  mkdir ws6
+  854  cd ws6
+  855  cp ../ws2/amazon_reviews_us_Books_v1_02.tsv .
+  856  ls
+  857  less amazon_reviews_us_Books_v1_02.tsv 
+  858  sed "/Y/d" | less
+  859  sed "/Y/d"
+  860  sed "/(.*?\t){11}Y\t/d" amazon_reviews_us_Books_v1_02.tsv 
+  861  sed "/(.*?\t){11}Y\t/d" amazon_reviews_us_Books_v1_02.tsv | less
+  862  grep -e "(a\t){3}"
+  863  sed -n "/^(.*?\t){11}Y\t/p" amazon_reviews_us_Books_v1_02.tsv | less
+  864  sed -n "/^(.*?\t){11}Y\t/p" amazon_reviews_us_Books_v1_02.tsv
+  865  sed -n "/^(\t){11}Y\t/p" amazon_reviews_us_Books_v1_02.tsv
+  866  sed -n "/^(\t)Y/p" amazon_reviews_us_Books_v1_02.tsv
+  867  sed -n "/^\tY/p" amazon_reviews_us_Books_v1_02.tsv
+  868  sed -n "/\tY/p" amazon_reviews_us_Books_v1_02.tsv
+  869  sed -n "/.*?\tN/p" amazon_reviews_us_Books_v1_02.tsv
+  870  sed -n "/(.*?\t)N/p" amazon_reviews_us_Books_v1_02.tsv
+  871  sed -nr "/(.*?\t)N/p" amazon_reviews_us_Books_v1_02.tsv
+  872  sed -nr "/(.*?\t){11}N\t/p" amazon_reviews_us_Books_v1_02.tsv
+  873  sed -nr "/(.*?\t){11}N\t/p" amazon_reviews_us_Books_v1_02.tsv | less
+  874  sed -nr "/^(.*?\t){11}N\t/p" amazon_reviews_us_Books_v1_02.tsv | less
+  875  less amazon_reviews_us_Books_v1_02.tsv 
+  876  touch unverified.txt
+  877  touch unverified_head20.txt
+  878  sed -nr "/^(.*?\t){11}N\t/p" amazon_reviews_us_Books_v1_02.tsv > unverified
+
+Step 1: Collect Lines and Step 2.1: Redirect to unverified.txt
+  879  sed -nr "/^(.*?\t){11}N\t/p" amazon_reviews_us_Books_v1_02.tsv > unverified.txt
+
+
+  880  bg
+  881  jobs
+  882  bg
+  883  jobs
+  884  bg
+  885  jobs
+  886  fg
+  887  head unverified
+  888  ls
+  889  rm unverified
+  890  head unverified.txt 
+  891  sed -nr "/^(.*?\t){11}N\t/p" amazon_reviews_us_Books_v1_02.tsv > unverified.txt
+
+Step 2.2: Put first 20 lines into new file called unverified_head20.txt
+  892  head -n 20 unverified.txt > unverified_head20.txt 
+
+
+  893  head unverified_head20.txt 
+  894  grep -e "^(.*?\t){11}Y\t" unverified.txt 
+  895  wc -l unverified.txt 
+  896  wc -l amazon_reviews_us_Books_v1_02.tsv 
+  897  wc -l unverified_head20.txt 
+
+Step 3: Collect lines for product 1844161560 and save to 1844161560.txt
+  898  sed -nr "/^(.*?\t){3}1844161560/p" unverified.txt > 1844161560.txt
+
+
+  899  head 1844161560.txt 
+  900  sed "s/,//g;s/.//g;s/;//g;s/to//g" 1844161560.txt 
+  901  sed "s/\,//g;s/\.//g;s/\;//g;s/to//g" 1844161560.txt 
+  902  wc -l 1844161560.txt  
+
+Step 4: (FAILED) Remove commas, dots, semicolons and the word "to", save to 1844161560_task5.txt ***CHECK THE END, THIS TASK WAS REDONE***
+  903  sed "s/\,//g;s/\.//g;s/\;//g;s/to//g" 1844161560.txt > 1844161560_task5.txt 
+
+
+  904  grep "to" 1844161560_task5.txt 
+  905  grep "." 1844161560_task5.txt 
+  906  grep "\." 1844161560_task5.txt 
+  907  grep "," 1844161560_task5.txt 
+  908  grep ";" 1844161560_task5.txt 
+  909  grep "\;" 1844161560_task5.txt 
+  910  ls
+  911  sed -r "s/\<.*?\>//g" 1844161560.txt 
+  912  sed "s/\<.*?\>//g" 1844161560.txt 
+  913  sed "s/\<.*?\/\>//g" 1844161560.txt 
+  914  sed -r "s/\<.*?\>//g" 1844161560.txt 
+  915  sed -r "s/<.*?>//g" 1844161560.txt 
+  916  sed -r "s/<.*?>//g" 1844161560.txt grep -e "<.*?>" 1844161560
+  917  sed -r "s/<.*?>//g" 1844161560.txt grep -e "<.*?>" 1844161560.txt 
+  918  grep -e "<.*?>" 1844161560
+  919  grep -e "<.*?>" 1844161560.txt
+  920  grep "<.*?>" 1844161560.
+  921  sed -r "s/<.*?/>//g" 1844161560.txt
+  922  sed -r "s/<.*?\/>//g" 1844161560.txt
+  923  sed -r "d/<.*?\/>/g" 1844161560.txt
+  924  sed -r "d/<.*?\/>/" 1844161560.txt
+  925  sed -r "d/<.*?\/>" 1844161560.txt
+  926  sed -r "s/<.*?\/>/replaced/g" 1844161560.txt
+  927  sed "s/<.*?\/>/replaced/g" 1844161560.txt
+  928  sed -r "s/<.*?\/>/replaced/g" 1844161560.txt
+  929  sed -r "s/<.*\/>/replaced/g" 1844161560.txt
+  930  sed -r "s/<.*?\/>/replaced/g" 1844161560.txt
+  931  sed -r "s/<.*?\/>/  replaced  /" 1844161560.txt
+  932  sed -r "s/<br \/>/  replaced  /g" 1844161560.txt
+  933  sed -r "s/<br \/>//g" 1844161560.txt
+  934  sed -r "s/<.*?\/>//g" 1844161560.txt
+  935  sed -r "s/<[^>]*\/>//g" 1844161560.txt
+
+Step 5: Remove all HTML tags, save to 1844161560_task6.txt
+  936  sed -r "s/<[^>]*\/>//g" 1844161560.txt > 1844161560_task6.tx
+
+
+  937  head 1844161560_task
+  938  head 1844161560_task6.txt 
+  939  grep "<" 1844161560_task6.txt 
+  940  grep "<" 1844161560.txt 
+  941  history > cmnd.log
+  942  vi cmnd.log
+  943  grep "1844161560" amazon_reviews_us_Books_v1_02.tsv | wc -l
+  944  grep "1844161560" amazon_reviews_us_Books_v1_02.tsv
+  945  wc -l 1844161560.txt
+  946  cat 1844161560.txt
+  947  sed -nr "/1844161560/p" unverified.txt > 1844161560.txt
+  948  sed "s/\,//g;s/\.//g;s/\;//g;s/to//g" 1844161560.txt > 1844161560_task5.txt 
+  949  sed -r "s/<[^>]*\/>//g" 1844161560.txt > 1844161560_task6.txt
+  950  less 1844161560.txt 
+  951  wc -l 1844161560
+  952  wc -l 1844161560.txt 
+  953  cat 1844161560.tx
+  954  cat 1844161560.txt
+  955  sed -nr "/1844161560/p" unverified.txt
+  956  less amazon_reviews_us_Books_v1_02.tsv 
+  957  sed "s/,//g;s/\.//g;s/;//g;s/to//g" 1844161560.txt
+  958  grep ";" 1844161560.txt 
+  959  sed "s/,//g;s/\.//g;s/;//g;s/to//g" 1844161560.txt | grep ";"
+  960  sed "s/,//g;s/\.//g;s/;//g;s/to//g" 1844161560.txt | grep ","
+  961  sed "s/,//g;s/\.//g;s/;//g;s/to//g" 1844161560.txt | grep "to"
+  962  sed -e "s/(([^\t]*\t){13}),/\1/g;s/(([^\t]*\t){13})\./\1/g;s/(([^\t]*\t){13});/\1/g;s/(([^\t]*\t){13})to/\1/g;" 1844161560.txt
+  963  sed -E "s/(([^\t]*\t){13}),/\1/g;s/(([^\t]*\t){13})\./\1/g;s/(([^\t]*\t){13});/\1/g;s/(([^\t]*\t){13})to/\1/g;" 1844161560.txt
+  964  sed -E "s/(([^\t]*\t){13}),/\1/g;s/(([^\t]*\t){13})\./\1/g;s/(([^\t]*\t){13});/\1/g;s/(([^\t]*\t){13})to/\1/g;" 1844161560.txt | grep ";"
+  965  sed -E "s/(([^\t]*\t){13}),/\1/g;s/(([^\t]*\t){13})\./\1/g;s/(([^\t]*\t){13});/\1/g;s/(([^\t]*\t){13})to/\1/g" 1844161560.txt | grep ";"
+  966  sed -E "s/(([^\t]*\t){13}),/\1/g;s/(([^\t]*\t){13})\./\1/g;s/(([^\t]*\t){13});/\1/g;s/(([^\t]*\t){13})to/\1/g" 1844161560.txt | grep ","
+  967  sed -Er "s/(([^\t]*\t){13}),/\1/g;s/(([^\t]*\t){13})\./\1/g;s/(([^\t]*\t){13});/\1/g;s/(([^\t]*\t){13})to/\1/g;" 1844161560.txt | grep ";"
+  968  sed -Ern "s/(([^\t]*\t){13}),/\1/g;s/(([^\t]*\t){13})\./\1/g;s/(([^\t]*\t){13});/\1/g;s/(([^\t]*\t){13})to/\1/g;" 1844161560.txt | grep ";"
+  969  sed -r "s/(([^\t]{13})/
+  970  sed -r "s/((^[^\t]){13})/\1\n/" 1844161560.txt
+  971  sed -r "s/((^[^\t]){13})/\n/" 1844161560.txt
+  972  sed -r "s/((^[^\t]){13})/\n/g" 1844161560.txt
+  973  sed  "s/((^[^\t]){13})/\n/g" 1844161560.txt
+  974  sed -r  "s/((^[^\t]){13}.)/\n/g" 1844161560.txt
+  975  sed -r  "s/(^[^\t]){13}.)//g" 1844161560.txt
+  976  sed -r  "s/(^[^\t]){13}.//g" 1844161560.txt
+  977  sed -r  "s/(^[^\t]){13}/APSDASDASKJDASFAD/g" 1844161560.txt
+  978  sed "/(^[^\t]){13}/a \n" 1844161560.txt
+  979  sed "/(^[.*]){13}/a \n" 1844161560.txt
+  980  sed "/(^(.*)){13}/a \n" 1844161560.txt
+  981  sed "/^(.*){13}/a \n" 1844161560.txt
+  982  sed "/^(.*\t){13}/a \n" 1844161560.txt
+  983  sed -r "/^(.*\t){13}/a \n" 1844161560.txt
+  984  sed -r "/^(.*\t){13}/a " 1844161560.txt
+  985  sed -r "/^(.*\t){13}/a \n" 1844161560.txt
+  986  sed -rz "/^(.*\t){13}/a \n" 1844161560.txt
+  987  sed -rz "/^(.*\t){13}/a :" 1844161560.txt
+  988  sed -rz "/^(.*\t){11}/a :" 1844161560.txt
+  989  sed -r "s/^(.*\t){13}/\1\n" 1844161560.txt
+  990  sed -r "s/^(.*\t){13}/\1\n/" 1844161560.txt
+  991  sed -r "s/(^(.*\t){13})/\1\n/" 1844161560.txt
+  992  sed -Er "s/(^(.*\t){13})/\1\n/" 1844161560.txt
+  993  sed -r "s/(^(.*\t){13} +)/\1\n/" 1844161560.txt
+  994  sed -r --debug "s/(^(.*\t){13})/\1\n/" 1844161560.txt
+  995  sed --debug "s/(^(.*\t){13})/\1\n/" 1844161560.txt
+  996  sed -r "G/^(.*\t){13}/" 1844161560.txt
+  997  sed -r "/^(.*\t){13}/ G" 1844161560.txt
+  998  quit
+  999  exit
+ 1000  cd cs131/ws6
+ 1001  sed -r 's/(.*\t){13}/&\n/" 1844161560.txt 
+ 1002  sed -r 's/(.*\t){13}/&\n/' 1844161560.txt 
+ 1003  sed -r 's/(.*\t){13}/ REPLACED /' 1844161560.txt 
+ 1004  sed -r 's/(.*\t){13}/ & REPLACED /' 1844161560.txt 
+ 1005  sed -r 's/(.*\t){12}/ & REPLACED /' 1844161560.txt 
+ 1006  sed -r 's/^(.*\t){12}/ & REPLACED /' 1844161560.txt 
+ 1007  sed -r 's/^(.*\t){11}/ & REPLACED /' 1844161560.txt 
+ 1008  sed -r 's/^(.*\t)\{11\}/ & REPLACED /' 1844161560.txt 
+ 1009  sed -r 's/^(.*\t){11}/ & REPLACED /' 1844161560.txt 
+ 1010  sed -r 's/^(.*\t){3}/ & REPLACED /' 1844161560.txt 
+ 1011  sed -r 's/^([^\t]*\t){13}/ & REPLACED /' 1844161560.txt 
+ 1012  sed -r 's/^([^\t]*\t){13}/ & \n /' 1844161560.txt 
+ 1013  sed -r 's/^([^\t]*\t){13}\t/ & \n /' 1844161560.txt | 
+ 1014  sed -r 's/^([^\t]*\t){13}\t/&\n/' 1844161560.txt | 
+ 1015  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | 
+ 1016  sed -r 's/^([^\t]*\t){13}\t/&\n/' 1844161560.txt
+ 1017  sed -r 's/^([^\t]*\t){13}\t/& \n/' 1844161560.txt
+ 1018  sed -r 's/^([^\t]*\t){13}\t/ & \n/' 1844161560.txt
+ 1019  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt
+ 1020  sed -r 's/^([^\t]*\t){13}[^,]/&/g' 1844161560.txt
+ 1021  sed -r 's/^([^\t]*\t){13}[^,]/&/g' 1844161560.txt | grep ","
+ 1022  sed -r 's/^([^\t]*\t){13}[^,]*,/&/g' 1844161560.txt | grep ","
+ 1023  sed -r 's/^([^\t]*\t){13}.*,/&/g' 1844161560.txt | grep ","
+ 1024  sed -r 's/^([^\t]*\t){13}[^t]to/&/g' 1844161560.txt | grep ","
+ 1025  sed -r 's/^([^\t]*\t){13}[^t]to/& what/g' 1844161560.txt | grep ","
+ 1026  sed -r 's/^([^\t]*\t){13}[^t]to/& ,,,,/g' 1844161560.txt | grep ","
+ 1027  sed -r 's/^([^\t]*\t){13}[^t]*to/& ,,,,/g' 1844161560.txt | grep ","
+ 1028  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt
+ 1029  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/ { n s/,//g;s/\.//g;s/ to / /g;s/;//g}
+ 1030  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/ {n s/,//g;s/\.//g;s/ to / /g;s/;//g}
+ 1031  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/ {n s/,//g;s/\.//g;s/ to / /g;s/;//g}'
+ 1032  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt
+ 1033  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/ {n s/,//g}'
+ 1034  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{ n s/,//g }'
+ 1035  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g}'
+ 1036  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g}' | grep ","
+ 1037  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g;s/\.//g}'
+ 1038  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g;s/\.//g;s/;//g;s/ to / /g}'
+ 1039  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g;s/\.//g;s/;//g;s/ to / /g}' | grep "to"
+ 1040  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g;s/\.//g;s/;//g;s/ to / /g}' | sed -r 'N'
+ 1041  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g;s/\.//g;s/;//g;s/ to / /g}' | sed -r 'N;p'
+ 1042  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g;s/\.//g;s/;//g;s/ to / /g}' | sed -r 'N'
+ 1043  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g;s/\.//g;s/;//g;s/ to / /g}' | sed -r 'N;s/\n//'
+ 1044  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g;s/\.//g;s/;//g;s/ to / /g}' | sed -r 'N;s/\n//' > 1844161560_task5.txt '
+
+Step 4: (Correct this time) Remove all periods, commas, semicolons, and the word "to" from the body ONLY and save to 1844161560_task5.txt
+ 1045  sed -r 's/^([^\t]*\t){13}/&\n/' 1844161560.txt | sed -r '/^([^\t]*\t){13}/{n;s/,//g;s/\.//g;s/;//g;s/ to / /g}' | sed -r 'N;s/\n//' > 1844161560_task5.txt
+
+
+ 1046  ls
+ 1047  history > cmnd.log
