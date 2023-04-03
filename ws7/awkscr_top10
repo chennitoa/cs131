@@ -1,0 +1,21 @@
+#! /usr/bin/awk -f
+BEGIN {
+	FS="\t";
+}
+{
+	split(tolower($13), words, " ");
+	for (i = 1; i <= length(words); i++) {
+		if(words[$i] != "") {
+			 amount[words[$i]]++;
+		}
+	}
+}
+END {
+	for (word in amount) {
+		wordCounter[amount[word]] = word;
+	}
+	asort(amount, nums);
+	for (i = 0; i < 10; i++) {
+		print nums[length(nums) - i], wordCounter[nums[length(nums) - i]];
+	}	
+}

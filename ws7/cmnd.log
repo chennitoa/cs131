@@ -1,0 +1,28 @@
+ 1000  cd cs131/ws7
+ 1001  vi awkscr_top10 
+ 1002  awk awkscr_top10 verified.txt 
+ 1003  awk -f awkscr_top10 verified.txt 
+ 1004  history
+ 1005  awk "BEGIN { FS = "\t" } { if ($12 == "Y") print $0 }" amazon_reviews_us_Books_v1_02.tsv > verified.txt
+ 1006  head verified.txt 
+ 1007  awk -f "BEGIN { FS = "\t" } { if ($12 == "Y") print $0 }" amazon_reviews_us_Books_v1_02.tsv
+ 1008  less amazon_reviews_us_Books_v1_02.tsv 
+ 1009  awk 'BEGIN { FS = "\t" } { if ($12 == "Y") print $0 }' amazon_reviews_us_Books_v1_02.tsv
+ 
+Step 1: Collect lines with verified reviews and Step 2.1: Redirect the output to verified.txt
+ 1010  awk 'BEGIN { FS = "\t" } { if ($12 == "Y") print $0 }' amazon_reviews_us_Books_v1_02.tsv > verified.txt
+
+
+ 1011  head verified.txt 
+
+Step 2.2: Load the first 20 lines of verified.txt
+ 1012  head -n 20 verified.txt > verified_head20.txt 
+ 1013  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+ 1014  awk -f awkscr_top10 verified.txt 
+
+Step 3: Find the top 10 most frequent words in the review_headline
+ 1015  awk -f awkscr_top10 verified.txt > top10.txt
+
+
+ 1016  wc -l top10.txt 
+ 1017  history > cmnd.log
