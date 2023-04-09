@@ -1,0 +1,17 @@
+Task 1: Collect all entries related to "replied_to" 
+ 1037  vi awkscr_extractID
+ 1038  awk -f awkscr_extractID downloaded_tweets_extend_nolf2.tsv > task1.txt
+
+Task 2: Filter out users with less influence
+ 1039  vi awkscr_3more
+ 1040  sort task1.txt | awk -f awkscr_3more > task2.txt
+
+Task 3: Plot the distribution of users
+ 1041  sort task2.txt | cut -d " " -f 1 | uniq -c | sed "s/^\s*//" | cut -d " " -f 1 > freq.txt
+ 1043  gnuplot -e 'set terminal svg; set output "h1.svg"; set style fill solid 1.0 noborder; bin_w=1; set boxwidth bin_w absolute; binN(x)=floor(x/bin_w); rounded(x) = bin_w * (binN(x) + 0.5); plot "freq.txt" using (rounded($1)):(1) smooth frequency with boxes'
+ 1044  display h1.svg
+ 1045  bg
+ 1046  gnuplot -e 'set terminal svg; set output "h4.svg"; set style fill solid 1.0 noborder; bin_w=4; set boxwidth bin_w absolute; binN(x)=floor(x/bin_w); rounded(x) = bin_w * (binN(x) + 0.5); plot "freqSorted.txt" using (rounded($1)):(1) smooth frequency with boxes'
+ 1047  display h4.svg
+ 1048  bg
+ 1049  history > cmnd.log

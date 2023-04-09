@@ -1,0 +1,26 @@
+#! /usr/bin/awk
+
+BEGIN {
+	FS = " ";
+	amount = 0;
+}
+{
+	if ($1 != lastUser) {
+		if (amount >= 3) {
+			for (i = 0; i < amount; i++) {
+				print lastUser, replies[i];
+			}
+		}
+		lastUser = $1;
+		amount = 0;
+	}
+	replies[amount] = $2;
+	amount++;
+}
+END {
+	if (amount >= 3) {
+		for (i = 0; i < amount; i++) {
+			print lastUser, replies[i];
+		}
+	}
+}

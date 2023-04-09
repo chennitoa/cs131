@@ -1,0 +1,8 @@
+#! /usr/bin/awk -f
+BEGIN {
+	FS="\t";
+}
+/replied_to]/ {
+
+	print $6, $2;
+}
