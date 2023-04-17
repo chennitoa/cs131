@@ -1,0 +1,12 @@
+The command run was: ./randomsample.sh 40 amazon_reviews_us_Books_v1_02.tsv > sampled
+
+wc -l amazon_reviews_us_Books_v1_02.tsv returned:
+3105521 amazon_reviews_us_Books_v1_02.tsv
+
+A random sampling of 40% of the lines in the amazon reviews dataset
+could be expected to produce close to
+
+3105521 * 0.4 = 1242208 lines
+
+wc -l sampled returned:
+1243372 sampled
