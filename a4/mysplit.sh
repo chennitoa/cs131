@@ -21,6 +21,8 @@ echo $cutoff;
 i=0;
 while read line;
 do
+	# Replace semicolon seperator with commas
+	line=`echo $line | sed 's/;/,/g'`
 	if [ $i -eq 0 ]; then
 		echo $line | tee ./train/data.csv > ./test/data.csv;
 	elif [ $i -le $cutoff ]; then
