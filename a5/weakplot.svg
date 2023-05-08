@@ -154,7 +154,25 @@
 </g>
 	<g id="gnuplot_plot_1" ><title>'cleanweakplot.csv' using 1:xticlabels(2)</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(148,   0, 211)'  d='M253.24,444.00 L253.24,443.51 L266.37,443.51 L266.37,444.00 L253.24,444.00 Z  '/>	<path stroke='rgb(148,   0, 211)'  d='M292.62,444.00 L292.62,443.51 L305.74,443.51 L305.74,444.00 L292.62,444.00 Z  '/>	<path stroke='rgb(148,   0, 211)'  d='M332.00,444.00 L332.00,442.29 L345.12,442.29 L345.12,444.00 L332.00,444.00 Z  '/>	<path stroke='rgb(148,   0, 211)'  d='M371.37,444.00 L371.37,153.21 L384.50,153.21 L384.50,444.00 L371.37,444.00 Z  '/>	<path stroke='rgb(148,   0, 211)'  d='M410.75,444.00 L410.75,66.68 L423.88,66.68 L423.88,444.00 L410.75,444.00 Z  '/>	<path stroke='rgb(148,   0, 211)'  d='M528.88,444.00 L528.88,443.76 L542.01,443.76 L542.01,444.00 L528.88,444.00 Z  '/></g>
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(148,   0, 211)' points = '253.24,444.00 266.38,444.00 266.38,443.50 253.24,443.50 '/>
+	</g>
+	<path stroke='rgb(148,   0, 211)'  d='M253.24,444.00 L253.24,443.51 L266.37,443.51 L266.37,444.00 L253.24,444.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(148,   0, 211)' points = '292.62,444.00 305.75,444.00 305.75,443.50 292.62,443.50 '/>
+	</g>
+	<path stroke='rgb(148,   0, 211)'  d='M292.62,444.00 L292.62,443.51 L305.74,443.51 L305.74,444.00 L292.62,444.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(148,   0, 211)' points = '332.00,444.00 345.13,444.00 345.13,442.28 332.00,442.28 '/>
+	</g>
+	<path stroke='rgb(148,   0, 211)'  d='M332.00,444.00 L332.00,442.29 L345.12,442.29 L345.12,444.00 L332.00,444.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(148,   0, 211)' points = '371.37,444.00 384.51,444.00 384.51,153.20 371.37,153.20 '/>
+	</g>
+	<path stroke='rgb(148,   0, 211)'  d='M371.37,444.00 L371.37,153.21 L384.50,153.21 L384.50,444.00 L371.37,444.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(148,   0, 211)' points = '410.75,444.00 423.89,444.00 423.89,66.67 410.75,66.67 '/>
+	</g>
+	<path stroke='rgb(148,   0, 211)'  d='M410.75,444.00 L410.75,66.68 L423.88,66.68 L423.88,444.00 L410.75,444.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(148,   0, 211)' points = '528.88,444.00 542.02,444.00 542.02,443.75 528.88,443.75 '/>
+	</g>
+	<path stroke='rgb(148,   0, 211)'  d='M528.88,444.00 L528.88,443.76 L542.01,443.76 L542.01,444.00 L528.88,444.00 Z  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(148,   0, 211)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
