@@ -1,0 +1,290 @@
+  794  ls
+  795  cd cs131
+  796  ls
+  797  mkdir a5
+  798  cd a5
+  799  curl https://www.kaggle.com/datasets/bhavikbb/password-strength-classifier-dataset/download?datasetVersionNumber=1
+  800  ls
+  801  wget https://www.kaggle.com/datasets/bhavikbb/password-strength-classifier-dataset/download?datasetVersionNumber=1
+  802  ls
+  803  cat 'download?datasetVersionNumber=1' 
+  804  rm 'download?datasetVersionNumber=1' 
+  805  pip install kaggle
+  806  kaggle datasets download -d bhavikbb/password-strength-classifier-dataset
+  807  cd ..
+  808  git reset --hard
+  809  git pull
+  810  git fetch
+  811  git pull
+  812  ls
+  813  rm a5
+  814  rmdir a5
+  815  ls
+  816  git fetch
+  817  git pull
+  818  ls
+  819  mkdir a5; mv archive.zip a5
+  820  ls
+  821  cd a5
+  822  ls
+  823  gnunzip archive.zip 
+  824  gunzip arc
+  825  gunzip archive.zip
+  826  ls
+  827  man gunzip
+  828  unzip archive.zip
+  829  ls
+  830  rm archive.zip
+  831  ls
+  832  head data.csv
+  833  git add .
+  834  git commit -m "Added dataset"
+  835  git push
+  836  cd ..
+  837  git status
+  838  git add archive.zip
+  839  git commit -m "Removed zip file"
+  840  git push
+  841  ls
+  842  cd a5
+  843  ls
+  844  vim splitbypasswdstrength.sh
+  845  chmod +x splitbypasswdstrength.sh 
+  846  vim splitbypasswdstrength.sh
+  847  mv splitbypasswdstrength.sh splitstrength.sh
+  848  ls
+  849  ./splitstrength.sh data.csv
+  850  vim splitbypasswdstrength.sh
+  851  vim splitstrength.sh 
+  852  ./splitstrength.sh data.csv
+  853  less data.csv
+  854  vim splitstrength.sh 
+  855  clear
+  856  man cut
+  857  vim splitstrength.sh 
+  858  ./splitstrength.sh data.csv 
+  859  vim splitstrength.sh 
+  860  ./splitstrength.sh data.csv 
+  861  vim splitstrength.sh 
+  862  ./splitstrength.sh data.csv 
+  863  vim splitstrength.sh 
+  864  ./splitstrength.sh data.csv 
+  865  vim splitstrength.sh 
+  866  ./splitstrength.sh data.csv 
+  867  vim splitstrength.sh 
+  868  head data.csv
+  869  vim splitstrength.sh 
+  870  ./splitstrength.sh data.csv 
+  871  ls
+  872  head strong.csv
+  873  ./splitstrength.sh data.csv 
+  874  bg
+  875  fg
+  876  vim splitstrength.sh 
+  877  head medium.csv 
+  878  head weak.csv 
+  879  ./splitstrength.sh data.csv
+  880  head weak.csv
+  881  head strong.csv
+  882  ./splitstrength.sh data.csv
+  883  jobs
+  884  fg
+  885  vim splitstrength.sh 
+  886  ./splitstrength.sh 
+  887  vim splitstrength.sh 
+  888  ./splitstrength.sh 
+  889  ./splitstrength.sh data.csv
+  890  wc -l weak.csv
+  891  wc -l strong.csv
+  892  wc -l medium.csv
+  893  head weak.csv
+  894  vim splitstrength.sh 
+  895  rm weak.csv medium.csv strong.csv 
+  896  ls
+  897  ./splitstrength.sh data.csv
+  898  rm weak.csv medium.csv strong.csv 
+  899  vim splitstrength.sh 
+  900  ./splitstrength.sh data.csv
+  901  ls
+  902  wc -l weak.csv
+  903  wc -l medium.csv
+  904  wc -l strong.csv
+  905  expr `2753+14754+2492`
+  906  expr `2753+14754`
+  907  expr '2753+14754+2492'
+  908  echo "2753+14754+2492" | bc
+  909  grep "elitebank44@gmail.com" weak.csv
+  910  grep "elitebank44@gmail.com" medium.csv
+  911  grep "elitebank44@gmail.com" strong.csv
+  912  grep "elitebank44\@gmail.com" strong.csv
+  913  grep "elitebank44\@gmail.com" weak.csv
+  914  grep "elitebank44\@gmail.com" medium.csv
+  915  grep "elitebank44\@gmail\.com" medium.csv
+  916  grep "elitebank44" medium.csv
+  917  grep "elitebank44" weak.csv
+  918  grep "elitebank44" strong.csv
+  919  tail dtaa.csv
+  920  tail data.csv
+  921  grep "elitebank44" data.csv
+  922  grep selim weak.csv
+  923  grep selim strong.csv
+  924  grep selim medium.csv
+  925  clear
+  926  ls
+  927  vim countlength.sh
+  928  chmod +x countlength.sh 
+  929  ./countlength.sh
+  930  ./countlength.sh weak.csv
+  931  clear
+  932  vim countlength.sh
+  933  ./countlength.sh weak.csv
+  934  vim countlength.sh
+  935  ./countlength.sh weak.csv
+  936  vim countlength.sh
+  937  ./countlength.sh weak.csv
+  938  ./countlength.sh weak.csv > weaklength.csv
+  939  head weaklength.csv
+  940  grep "1" weaklength.csv
+  941  wc -l weaklength.csv 
+  942  wc -l weak.csv
+  943  ./countlength.sh weak.csv > weaklength.csv
+  944  vim countlength.sh 
+  945  ./countlength.sh weak.csv > weaklength.csv
+  946  ./countlength.sh medium.csv > mediumlength.csv
+  947  ./countlength.sh strong.csv > stronglength.csv
+  948  sort weak.csv
+  949  sort weaklength.csv
+  950  sort weaklength.csv | head
+  951  sort mediumlength.csv | head
+  952  sort mediumlength.csv | tail
+  953  sort -nr mediumlength.csv | head
+  954  sort -n mediumlength.csv | head
+  955  sort -n stronglength.csv | head
+  956  sort -n stronglength.csv | tail
+  957  sort -n weaklength.csv | uniq -c
+  958  sort -n weaklength.csv | uniq -c | tr " "
+  959  sort -n weaklength.csv | uniq -c | sed "s/^\s*//"
+  960  sort -n weaklength.csv | uniq -c | sed "s/^\s*//" > weakplot.csv
+  961  sort -n mediumlength.csv | uniq -c | sed "s/^\s*//" > mediumplot.csv
+  962  sort -n stronglength.csv | uniq -c | sed "s/^\s*//" > strongplot.csv
+  963  l
+  964  ls
+  965  gnuplot
+  966  cd ..
+  967  l
+  968  ls
+  969  cd ..
+  970  vim ~/.bashrc
+  971  source ~/.bashrc
+  972  echo $PATH
+  973  gnuplot
+  974  cd a5
+  975  ls
+  976  cd cs131
+  977  cd a5
+  978  ls
+  979  gnuplot
+  980  ls
+  981  displau weakplot.svg
+  982  display weakplot.svg
+  983  exit
+  984  jobs
+  985  fg
+  986  ./splitstrength.sh data.csv 
+  987  wc -l weak.csv
+  988  rm weak.csv medium.csv strong.csv
+  989  ./splitstrength.sh data.csv 
+  990  bg
+  991  display weakplot.svg
+  992  jobs
+  993  ls
+  994  clear
+  995  exit
+  996  cd cs131/a5
+  997  ls
+  998  display weakplot.svg
+  999  cd cs131/a5
+ 1000  display weakplot.svg
+ 1001  gnuplot
+ 1002  source ~/.bashrc
+ 1003  gnuplot -e 'set terminal svg; set output "weakplot.svg"; set style histogram cluster gap 1; plot "weakplot.csv" using 1:xticlabels(2) with histogram
+gnuplot -e 'set terminal svg; set output "weakplot.svg"; set style histogram cluster gap 1; plot "weakplot.csv" using 1:xticlabels(2) with histogram'
+ 1004  gnuplot -e 'set terminal svg; set output "weakplot.svg"; set style histogram cluster gap 1; plot "weakplot.csv" using 1:xticlabels(2) with histogram'
+ 1005  git add weakplot.svg
+ 1006  ls
+ 1007  git add *.sh
+ 1008  git commit -m "Added shell scripts and display"
+ 1009  git push
+ 1010  vim fillLines.sh
+ 1011  mv fillLines.sh filllines.sh
+ 1012  vim filllines.sh
+ 1013  ./filllines.sh weakplot.csv
+ 1014  chmod +x filllines.sh
+ 1015  ./filllines.sh weakplot.csv
+ 1016  vim filllines.sh
+ 1017  ./filllines.sh weakplot.csv
+ 1018  vim filllines.sh
+ 1019  ./filllines.sh weakplot.csv
+ 1020  head weakplot.csv
+ 1021  vim filllines.sh
+ 1022  head weakplot.csv
+ 1023  vim filllines.sh
+ 1024  ./filllines.sh weakplot.csv
+ 1025  vim filllines.sh
+ 1026  ./filllines.sh weakplot.csv
+ 1027  vim filllines.sh
+ 1028  ./filllines.sh weakplot.csv
+ 1029  vim filllines.sh
+ 1030  ./filllines.sh weakplot.csv
+ 1031  vim filllines.sh
+ 1032  ./filllines.sh weakplot.csv
+ 1033  vim filllines.sh
+ 1034  ./filllines.sh weakplot.csv
+ 1035  vim filllines.sh
+ 1036  ./filllines.sh weakplot.csv
+ 1037  vim filllines.sh
+ 1038  ./filllines.sh weakplot.csv
+ 1039  vim filllines.sh
+ 1040  ./filllines.sh weakplot.csv
+ 1041  vim filllines.sh
+ 1042  ./filllines.sh weakplot.csv
+ 1043  vim filllines.sh
+ 1044  ./filllines.sh weakplot.csv
+ 1045  ./filllines.sh weakplot.csv > cleanweakplot.csv
+ 1046  ./filllines.sh mediumplot.csv > cleanmediumplot.csv
+ 1047  ./filllines.sh strongplot.csv > cleanstrongplot.csv
+ 1048  gnuplot -e "set terminal svg; set output 'weakplot.svg'; set title 'Weak Password Lengths'; set key off; set style histogram cluter gap 2; plot 'cleanweakplot.csv' using 1:xticlabels(2) with histogram
+ 1049  gnuplot -e "set terminal svg; set output 'weakplot.svg'; set title 'Weak Password Lengths'; set key off; set style histogram cluter gap 2; plot 'cleanweakplot.csv' using 1:xticlabels(2) with histogram'
+ 1050  gnuplot -e "set terminal svg; set output 'weakplot.svg'; set title 'Weak Password Lengths'; set key off; set style histogram cluter gap 2; plot 'cleanweakplot.csv' using 1:xticlabels(2) with histogram"
+ 1051  gnuplot -e "set terminal svg; set output 'weakplot.svg'; set title 'Weak Password Lengths'; set key off; set style histogram cluster gap 2; plot 'cleanweakplot.csv' using 1:xticlabels(2) with histogram"
+ 1052  git add *.sh
+ 1053  git status
+ 1054  git add weakplot.svg
+ 1055  git commit -m "Updated plot + new shell script file"
+ 1056  git pus
+ 1057  git push
+ 1058  gnuplot -e "set terminal svg; set output 'weakplot.svg'; set title 'Weak Password Lengths'; set key off; set style histogram cluster gap 2; set fill solid; plot 'cleanweakplot.csv' using 1:xticlabels(2) with histogram"
+ 1059  gnuplot -e "set terminal svg; set output 'weakplot.svg'; set title 'Weak Password Lengths'; set key off; set style histogram cluster gap 2; set style fill solid; plot 'cleanweakplot.csv' using 1:xticlabels(2) with histogram"
+ 1060  git add weakplot.svg
+ 1061  git commit -m "Updated plot"
+ 1062  git push
+ 1063  gnuplot -e "set terminal svg; set output 'weakplot.svg'; set title 'Medium Password Lengths'; set key off; set style histogram cluster gap 2; set style fill solid; plot 'cleanmediumplot.csv' using 1:xticlabels(2) with histogram"
+ 1064  gnuplot -e "set terminal svg; set output 'weakplot.svg'; set title 'Weak Password Lengths'; set key off; set style histogram cluster gap 2; set style fill solid; plot 'cleanweakplot.csv' using 1:xticlabels(2) with histogram"
+ 1065  gnuplot -e "set terminal svg; set output 'mediumplot.svg'; set title 'Medium Password Lengths'; set key off; set style histogram cluster gap 2; set style fill solid; plot 'cleanmediumplot.csv' using 1:xticlabels(2) with histogram"
+ 1066  git add *.svg
+ 1067  git commit -m "Added new plot"
+ 1068  git push
+ 1069  gnuplot -e "set terminal svg; set output 'strongplot.svg'; set title 'Strong Password Lengths'; set key off; set style histogram cluster gap 2; set style fill solid; plot 'cleanstrongplot.csv' using 1:xticlabels(2) with histogram"
+ 1070  git add *.svg
+ 1071  git commit -m "Added strong passwords plot"
+ 1072  git push
+ 1073  gnuplot -e "set terminal svg size 2400, 1600; set output 'strongplot.svg'; set title 'Strong Password Lengths'; set key off; set style histogram cluster gap 2; set style fill solid; plot 'cleanstrongplot.csv' using 1:xticlabels(2) with histogram"
+ 1074  git add *.svg
+ 1075  git commit -m "Fixed strong passwords"
+ 1076  git push
+ 1077  gnuplot -e "set terminal svg size 1200, 800; set output 'strongplot.svg'; set title 'Strong Password Lengths'; set key off; set style histogram cluster gap 2; set style fill solid; plot 'cleanstrongplot.csv' using 1:xticlabels(2) with histogram"
+ 1078  git commit -m "Updated strong plot"
+ 1079  git add *.svg
+ 1080  git commit -m "Updated strong plot"
+ 1081  git push
+ 1082  history > cmnd.log
