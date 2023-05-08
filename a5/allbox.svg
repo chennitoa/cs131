@@ -105,20 +105,20 @@
 	<g id="gnuplot_plot_1" ><title>'allbox.csv' using (0):1</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(148,   0, 211)'  d='M121.67,405.00 L197.19,405.00 L197.19,399.43 L121.67,399.43 L121.67,405.00 Z  '/>	<path stroke='rgb(148,   0, 211)'  d='M121.67,399.43 L197.19,399.43 M159.43,405.00 M159.43,399.43 M150.43,399.43 L168.43,399.43 M150.43,405.00 L168.43,405.00
-		 '/>	<use xlink:href='#gpPt6' transform='translate(159.43,421.71) scale(4.50)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(159.43,382.72) scale(4.50)' color='rgb(148,   0, 211)'/>
+		 '/>	<use xlink:href='#gpPt6' transform='translate(159.43,421.71) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(159.43,382.72) scale(2.25)' color='rgb(148,   0, 211)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>'' using (1):2</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(  0, 158, 115)'  d='M272.72,388.29 L348.24,388.29 L348.24,382.72 L272.72,382.72 L272.72,388.29 Z  '/>	<path stroke='rgb(  0, 158, 115)'  d='M272.72,388.29 L348.24,388.29 M310.48,393.86 L310.48,388.29 M310.48,382.72 M301.48,382.72 L319.48,382.72 M301.48,393.86
-		L319.48,393.86  '/>	<use xlink:href='#gpPt6' transform='translate(310.48,360.43) scale(4.50)' color='rgb(  0, 158, 115)'/>
+		L319.48,393.86  '/>	<use xlink:href='#gpPt6' transform='translate(310.48,360.43) scale(2.25)' color='rgb(  0, 158, 115)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_3" ><title>'' using (2):3</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 86, 180, 233)'  d='M423.77,349.29 L499.29,349.29 L423.77,349.29 Z  '/>	<path stroke='rgb( 86, 180, 233)'  d='M423.77,349.29 L499.29,349.29 M461.53,349.29 M452.53,349.29 L470.53,349.29 M452.53,349.29 L470.53,349.29  '/>	<use xlink:href='#gpPt6' transform='translate(461.53,366.00) scale(4.50)' color='rgb( 86, 180, 233)'/>
-	<use xlink:href='#gpPt6' transform='translate(461.53,81.87) scale(4.50)' color='rgb( 86, 180, 233)'/>
+	<path stroke='rgb( 86, 180, 233)'  d='M423.77,349.29 L499.29,349.29 L423.77,349.29 Z  '/>	<path stroke='rgb( 86, 180, 233)'  d='M423.77,349.29 L499.29,349.29 M461.53,349.29 M452.53,349.29 L470.53,349.29 M452.53,349.29 L470.53,349.29  '/>	<use xlink:href='#gpPt6' transform='translate(461.53,366.00) scale(2.25)' color='rgb( 86, 180, 233)'/>
+	<use xlink:href='#gpPt6' transform='translate(461.53,81.87) scale(2.25)' color='rgb( 86, 180, 233)'/>
 </g>
 	</g>
 <g fill="none" color="white" stroke="rgb( 86, 180, 233)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
